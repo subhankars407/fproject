@@ -1,0 +1,50 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#">SOPS</a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/table-list">Tables</a></li>
+                <li><a routerLink='/category-list'>Category</a></li>
+                <li><a routerLink="/menu-list">Menu</a></li>
+                <li><a routerLink="/admin-user">User list</a></li>
+                <li><a routerLink="/order-list">Orders</a></li>
+                <li><a routerLink="/payment-list">Payment history</a></li>
+                <li><a routerLink="/admin-users">separator</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<h1>User List</h1>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of users'>
+            <td>{{user.userid}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>******</td>
+
+
+        </tr>
+    </tbody>
+</table>
